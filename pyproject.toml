@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "markdown-tts"
+version = "0.1.0"
+description = "Semantic Markdown parsing foundation for high-quality text-to-speech."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "markdown-it-py>=3.0,<5.0",
+    "mdit-py-plugins>=0.5,<1.0",
+    "openai>=2.0,<3.0",
+]
+
+[project.scripts]
+markdown-tts = "markdown_tts.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

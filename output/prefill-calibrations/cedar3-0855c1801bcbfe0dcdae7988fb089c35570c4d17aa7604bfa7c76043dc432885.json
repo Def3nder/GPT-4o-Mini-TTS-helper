@@ -1,0 +1,18 @@
+{
+  "schema_version": 3,
+  "configuration_sha256": "0855c1801bcbfe0dcdae7988fb089c35570c4d17aa7604bfa7c76043dc432885",
+  "prefill_text": "Dies ist ein kurzer technischer Vorspann.",
+  "prefill_separator": "\n\n",
+  "profile_name": "cedar3",
+  "voice": "cedar",
+  "speed": 1.0,
+  "instructions_sha256": "3d13f3029f8557a4c5ab6505129438a557e1bf3bda6533eb7199d93082441ec9",
+  "model": "gpt-4o-mini-tts-2025-12-15",
+  "provider": "openai",
+  "response_format": "wav",
+  "stream_format": "sse",
+  "duration_seconds": 3.0,
+  "sample_rate": 24000,
+  "channels": 1,
+  "sample_width_bytes": 2
+}

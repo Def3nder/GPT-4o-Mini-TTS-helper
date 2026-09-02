@@ -1,0 +1,30 @@
+{
+  "ordered_list_markers": [
+    "Erstens",
+    "Zweitens",
+    "Drittens",
+    "Viertens",
+    "Fünftens",
+    "Sechstens",
+    "Siebtens",
+    "Achtens",
+    "Neuntens",
+    "Zehntens"
+  ],
+  "ordered_list_fallback": "Punkt {number}",
+  "unordered_list_marker": "",
+  "list_marker_suffix": ", ",
+  "heading_suffix": ".",
+  "block_separator": "\n\n",
+  "list_item_separator": "\n",
+  "quote_prefix": "",
+  "table_cell_separator": ", ",
+  "table_row_separator": "\n",
+  "footnote_prefix": "Fußnote {label}: ",
+  "speak_tables": false,
+  "speak_code_blocks": false,
+  "speak_footnotes": false,
+  "speak_image_alt_text": false,
+  "speak_inline_code": true,
+  "remove_punctuation_only_blocks": true
+}

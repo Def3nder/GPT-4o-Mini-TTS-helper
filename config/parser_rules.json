@@ -1,0 +1,10 @@
+{
+  "front_matter_delimiter": "---",
+  "remove_html_comments": true,
+  "remove_urls": true,
+  "url_pattern": "(?i)\\s*\\b(?:https?://|www\\.)[^\\s<>()]+(?<![.,;:!?])",
+  "source_prefixes": [
+    "Quelle:"
+  ],
+  "date_line_pattern": "^Datum:\\s*\\d{4}-\\d{2}-\\d{2}\\s*$"
+}

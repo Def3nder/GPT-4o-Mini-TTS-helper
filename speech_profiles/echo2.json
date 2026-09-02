@@ -1,0 +1,6 @@
+{
+  "name": "echo2",
+  "voice": "echo",
+  "speed": 1.0,
+  "instructions": "Sprich in einem ruhigen, natürlichen Tempo. Lege nach Kommas und Punkten kurze, spürbare Pausen ein, als ob ein echter Mensch kurz Luft holt."
+}

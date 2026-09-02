@@ -1,0 +1,11 @@
+{
+  "text": "Dies ist ein kurzer technischer Vorspann.",
+  "separator": "\n\n",
+  "analysis_window_milliseconds": 20.0,
+  "minimum_quiet_milliseconds": 80.0,
+  "quiet_threshold_dbfs": -38.0,
+  "search_before_seconds": 0.8,
+  "search_after_seconds": 1.2,
+  "cut_safety_seconds": 0.15,
+  "minimum_remaining_seconds": 0.2
+}

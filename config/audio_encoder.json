@@ -1,0 +1,11 @@
+{
+  "backend": "ffmpeg",
+  "executable": "ffmpeg",
+  "probe_executable": "ffprobe",
+  "codec": "libmp3lame",
+  "expected_codec_name": "mp3",
+  "bitrate": "128k",
+  "log_level": "error",
+  "timeout_seconds": 300.0,
+  "duration_tolerance_seconds": 0.2
+}

@@ -1,0 +1,16 @@
+{
+  "provider": "openai",
+  "api_key_environment_variable": "GPT-4o-Mini-TTS-Key",
+  "model": "gpt-4o-mini-tts-2025-12-15",
+  "response_format": "wav",
+  "stream_format": "sse",
+  "timeout_seconds": 120.0,
+  "max_retries": 2,
+  "pricing": {
+    "currency": "USD",
+    "effective_date": "2026-09-01",
+    "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini-tts",
+    "input_text_tokens_per_million": 0.6,
+    "output_audio_tokens_per_million": 12.0
+  }
+}

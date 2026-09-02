@@ -1,0 +1,101 @@
+Hier sind vier maßgeschneiderte **Stimmen- und Regieanweisungs-Kombinationen** für `gpt-4o-mini-tts`. Sie decken verschiedene Energie-Level ab und nutzen die Stärken des Modells, um Monotonie zu verhindern und maximale Klarheit zu garantieren.
+
+🧘 Level 1: Tiefenentspannt & Sanft (Niedrige Energie)
+
+Ideal für Traumreisen, Meditationen, emotionale Coaching-Geschichten und Deep-Relaxation.
+
+-   **Beste Stimme:** **Nova** (weiblich, sehr warm) oder **Echo** (männlich, sehr gelassen).
+-   **Regieanweisung (Instructions):**
+    
+    > _"Sprich extrem ruhig, sanft und in einem absichtlich verlangsamten Tempo. Nutze eine weiche, fast flüsternde Stimme. Atme spürbar zwischen den Sätzen. Mache nach jedem Absatz eine lange, bewusste Pause von mindestens 3 Sekunden. Jedes Wort muss glasklar artikuliert sein, aber ohne jegliche Härte. Erzeuge eine intime, schützende Atmosphäre."_
+    
+
+🌱 Level 2: Klar, Reflektiert & Empathisch (Mittlere Energie)
+
+Der Standard für klassische Coaching-Inhalte, Reflexionsfragen, Storytelling und Erklärungen. Hier steht das Verstehen und Nachdenken im Vordergrund.
+
+-   **Beste Stimme:** **Cedar** (männlich, tief und fehlerfrei) oder **Marin** (weiblich, lebendig und klar).
+-   **Regieanweisung (Instructions):**
+    
+    > _"Sprich in einem natürlichen, moderaten Erzähltempo mit absoluter Klarheit in der Aussprache. Vermeide jegliche Monotonie, indem du die Tonhöhe bei wichtigen Erkenntnissen leicht senkst. Mache nach Fragen an den Zuhörer eine deutliche Pause. Klinge wie ein erfahrener, vertrauensvoller Mentor – bodenständig, mitfühlend und präsent."_
+    
+
+🚀 Level 3: Motivierend & Aktivierend (Höhere Energie)
+
+Perfekt für Mindset-Coaching, Morgen-Routinen, Zielsetzungen und das Überwinden von Blockaden.
+
+-   **Beste Stimme:** **Marin** (weiblich, sehr dynamisch) oder **Onyx** (männlich, kraftvoll und resonant).
+-   **Regieanweisung (Instructions):**
+    
+    > _"Sprich mit einer klaren, vorwärtsgerichteten und positiven Energie. Das Sprechtempo ist leicht angezogen, aber absolut präzise und glasklar in der Artikulation. Betone Verben und kraftvolle Schlüsselwörter mit spürbarem Nachdruck. Klinge ermutigend, selbstbewusst und unterstützend. Lass deine Stimme am Ende von Sätzen nicht absinken, sondern halte die Spannung hoch."_
+    
+
+🔥 Level 4: Enthusiastisch & Inspirierend (Maximale Energie)
+
+Ideal für Keynotes, feurige Impulse, Manifestationen oder den "Extra-Kick" an Begeisterung.
+
+-   **Beste Stimme:** **Shimmer** (weiblich, hochenergetisch) oder **Onyx** (männlich, extrem präsent).
+-   **Regieanweisung (Instructions):**
+    
+    > _"Sprich mit maximaler Begeisterung und spürbarer Leidenschaft in der Stimme. Klinge absolut enthusiastisch, inspiriert und mitreißend. Nutze dynamische Schwankungen in der Tonhöhe (lebendige Intonation), um den Text maximal packend zu gestalten. Jedes Konsonant muss messerscharf und klar ausgesprochen werden. Klinge so, als würdest du eine lebensverändernde Entdeckung teilen."_
+    
+
+----------
+
+💡 Profi-Tipp für die Textformatierung
+
+Damit die Pausen aus den Anweisungen perfekt umgesetzt werden, hilft es, den Text selbst mit **Satzzeichen als visuelle Anker** zu füttern. `gpt-4o-mini-tts` reagiert stark darauf:
+
+-   Nutze Gedankenstriche (`–`) für kurze, spannungsgeladene Pausen mitten im Satz.
+-   Nutze drei Punkte (`...`) vor wichtigen Wörtern, um die Stimme automatisch abbremsen zu lassen.
+-   Lass zwischen Absätzen im Text zwei Leerzeilen, um der KI auch visuell eine Pause zu signalisieren.
+Hier sind vier maßgeschneiderte Stimmen- und Regieanweisungs-Kombinationen für gpt-4o-mini-tts. Sie decken verschiedene Energie-Level ab und nutzen die Stärken des Modells, um Monotonie zu verhindern und maximale Klarheit zu garantieren.
+
+🧘 Level 1: Tiefenentspannt & Sanft (Niedrige Energie)
+
+Ideal für Traumreisen, Meditationen, emotionale Coaching-Geschichten und Deep-Relaxation.
+
+Beste Stimme: Nova (weiblich, sehr warm) oder Echo (männlich, sehr gelassen).
+
+Regieanweisung (Instructions):
+
+“Sprich extrem ruhig, sanft und in einem absichtlich verlangsamten Tempo. Nutze eine weiche, fast flüsternde Stimme. Atme spürbar zwischen den Sätzen. Mache nach jedem Absatz eine lange, bewusste Pause von mindestens 3 Sekunden. Jedes Wort muss glasklar artikuliert sein, aber ohne jegliche Härte. Erzeuge eine intime, schützende Atmosphäre.”
+
+🌱 Level 2: Klar, Reflektiert & Empathisch (Mittlere Energie)
+
+Der Standard für klassische Coaching-Inhalte, Reflexionsfragen, Storytelling und Erklärungen. Hier steht das Verstehen und Nachdenken im Vordergrund.
+
+Beste Stimme: Cedar (männlich, tief und fehlerfrei) oder Marin (weiblich, lebendig und klar).
+
+Regieanweisung (Instructions):
+
+“Sprich in einem natürlichen, moderaten Erzähltempo mit absoluter Klarheit in der Aussprache. Vermeide jegliche Monotonie, indem du die Tonhöhe bei wichtigen Erkenntnissen leicht senkst. Mache nach Fragen an den Zuhörer eine deutliche Pause. Klinge wie ein erfahrener, vertrauensvoller Mentor – bodenständig, mitfühlend und präsent.”
+
+🚀 Level 3: Motivierend & Aktivierend (Höhere Energie)
+
+Perfekt für Mindset-Coaching, Morgen-Routinen, Zielsetzungen und das Überwinden von Blockaden.
+
+Beste Stimme: Marin (weiblich, sehr dynamisch) oder Onyx (männlich, kraftvoll und resonant).
+
+Regieanweisung (Instructions):
+
+“Sprich mit einer klaren, vorwärtsgerichteten und positiven Energie. Das Sprechtempo ist leicht angezogen, aber absolut präzise und glasklar in der Artikulation. Betone Verben und kraftvolle Schlüsselwörter mit spürbarem Nachdruck. Klinge ermutigend, selbstbewusst und unterstützend. Lass deine Stimme am Ende von Sätzen nicht absinken, sondern halte die Spannung hoch.”
+
+🔥 Level 4: Enthusiastisch & Inspirierend (Maximale Energie)
+
+Ideal für Keynotes, feurige Impulse, Manifestationen oder den “Extra-Kick” an Begeisterung.
+
+Beste Stimme: Shimmer (weiblich, hochenergetisch) oder Onyx (männlich, extrem präsent).
+
+Regieanweisung (Instructions):
+
+“Sprich mit maximaler Begeisterung und spürbarer Leidenschaft in der Stimme. Klinge absolut enthusiastisch, inspiriert und mitreißend. Nutze dynamische Schwankungen in der Tonhöhe (lebendige Intonation), um den Text maximal packend zu gestalten. Jedes Konsonant muss messerscharf und klar ausgesprochen werden. Klinge so, als würdest du eine lebensverändernde Entdeckung teilen.”
+
+💡 Profi-Tipp für die Textformatierung
+
+Damit die Pausen aus den Anweisungen perfekt umgesetzt werden, hilft es, den Text selbst mit Satzzeichen als visuelle Anker zu füttern. gpt-4o-mini-tts reagiert stark darauf:
+
+Nutze Gedankenstriche (–) für kurze, spannungsgeladene Pausen mitten im Satz.
+Nutze drei Punkte (...) vor wichtigen Wörtern, um die Stimme automatisch abbremsen zu lassen.
+Lass zwischen Absätzen im Text zwei Leerzeilen, um der KI auch visuell eine Pause zu signalisieren.
+Markdown 3512 bytes 436 words 51 lines Ln 51, Col 103HTML 2869 characters 420 words 26 paragraphs

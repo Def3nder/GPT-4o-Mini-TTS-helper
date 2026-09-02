@@ -1,0 +1,11 @@
+{
+  "max_characters": 3800,
+  "preferred_minimum_characters": 800,
+  "minimum_split_ratio": 0.5,
+  "start_new_chunk_at_headings": true,
+  "structural_break_characters": "\n",
+  "sentence_end_characters": ".!?…",
+  "clause_end_characters": ";:—–",
+  "comma_characters": ",",
+  "allow_whitespace_fallback": true
+}

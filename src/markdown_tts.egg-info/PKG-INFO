@@ -1,0 +1,344 @@
+Metadata-Version: 2.4
+Name: markdown-tts
+Version: 0.1.0
+Summary: Semantic Markdown parsing foundation for high-quality text-to-speech.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: markdown-it-py<5.0,>=3.0
+Requires-Dist: mdit-py-plugins<1.0,>=0.5
+Requires-Dist: openai<3.0,>=2.0
+
+# Markdown TTS
+
+> High-quality Markdown to Speech engine using OpenAI GPT-4o Mini TTS.
+
+---
+
+## Vision
+
+Markdown TTS ist keine einfache Text-to-Speech-Anwendung.
+
+Das Ziel des Projekts besteht darin, strukturierte Dokumente (beginnend mit Markdown) in hochwertige Sprachaufnahmen umzuwandeln, die sich möglichst wie professionell produzierte Hörbücher oder Podcasts anhören.
+
+Der Schwerpunkt liegt auf:
+
+- natürlicher Sprachqualität
+- semantischer Interpretation von Dokumenten
+- reproduzierbarer Audioqualität
+- modularer Architektur
+- langfristiger Erweiterbarkeit
+
+---
+
+# Projektziele
+
+Dieses Projekt soll:
+
+- Markdown intelligent interpretieren
+- Dokumentstruktur erhalten
+- natürliche Sprachpausen erzeugen
+- verschiedene Sprachprofile unterstützen
+- hochwertige MP3-Dateien erzeugen
+- leicht auf andere Eingabeformate erweiterbar sein
+- später problemlos nach Node.js portiert werden können
+
+Nicht-Ziele:
+
+- möglichst kurze Entwicklungszeit
+- möglichst wenig Code
+- möglichst schnelle Verarbeitung
+
+Qualität besitzt Vorrang.
+
+---
+
+# Hauptfunktionen
+
+## Dokumentbereinigung
+
+Automatisches Entfernen von
+
+- URLs
+- Quellenangaben
+- Datumsangaben
+- YAML Frontmatter
+- HTML-Kommentaren
+- Referenzdefinitionen
+
+---
+
+## Semantische Interpretation
+
+Markdown wird nicht gelöscht.
+
+Es wird interpretiert.
+
+Beispiele:
+
+- Überschriften
+- Absätze
+- Listen
+- Zitate
+- Hervorhebungen
+- Trennlinien
+
+Diese Informationen beeinflussen später die Sprachgestaltung.
+
+---
+
+## Sprachprofile
+
+Geplante Profile
+
+- Coaching
+- Hörbuch
+- Podcast
+- Meditation
+
+Jedes Profil definiert unter anderem:
+
+- Stimme
+- Geschwindigkeit
+- globale Sprachanweisungen
+- Pausen
+- Betonung
+
+---
+
+## Chunking
+
+Lange Dokumente werden automatisch in sinnvolle Blöcke aufgeteilt.
+
+Priorität:
+
+1. Kapitel
+2. Absatz
+3. Satz
+4. Komma
+
+Dadurch bleiben Sprachfluss und Prosodie möglichst natürlich.
+
+---
+
+## Audio
+
+Das System erzeugt
+
+↓
+
+mehrere Chunks
+
+↓
+
+mehrere MP3-Dateien
+
+↓
+
+eine fertige MP3-Datei
+
+---
+
+# Architektur
+
+```
+Markdown
+
+↓
+
+Parser
+
+↓
+
+AST (Dokumentstruktur)
+
+↓
+
+Semantic Renderer
+
+↓
+
+Speech Renderer
+
+↓
+
+OpenAI TTS
+
+↓
+
+Audio Joiner
+
+↓
+
+MP3
+```
+
+---
+
+# Projektstruktur
+
+```
+markdown-tts/
+
+README.md
+
+CONTEXT.md
+ARCHITECTURE.md
+DECISIONS.md
+PROJECT_RULES.md
+ROADMAP.md
+BACKLOG.md
+LESSONS-LEARNED.md
+EXPERIMENTS.md
+TEST_CORPUS.md
+
+config/
+    parser_rules.json
+    semantic_renderer.json
+
+src/
+    markdown_tts/
+
+tests/
+```
+
+---
+
+# Dokumentation
+
+| Datei | Inhalt |
+|--------|---------|
+| README.md | Projektübersicht |
+| CONTEXT.md | Vision und Motivation |
+| ARCHITECTURE.md | Systemarchitektur |
+| DECISIONS.md | Architekturentscheidungen |
+| PROJECT_RULES.md | Entwicklungsregeln |
+| ROADMAP.md | Versionsplanung |
+| BACKLOG.md | Detaillierte Aufgaben |
+| TODO.md | Kompakter Projektstatus |
+| LESSONS-LEARNED.md | Erkenntnisse |
+| EXPERIMENTS.md | Experimente |
+| TEST_CORPUS.md | Referenztests |
+
+---
+
+# Aktueller Implementierungsstand
+
+Der erste MVP-Baustein ist verfügbar:
+
+- striktes UTF-8-Laden
+- semantisches, providerunabhängiges Dokument-AST
+- Erkennung von Überschriften, Absätzen, Listen, Zitaten, Hervorhebungen und Code
+- semantische Erkennung von Tabellen und Fußnoten
+- konfigurierbares Entfernen von Frontmatter, URLs, Quellenzeilen, Datumszeilen und HTML-Kommentaren
+- sprechbare Textausgabe mit ausgeschlossenen Tabellen, Codeblöcken, Bildern und Fußnoten
+- deutsche Formulierungen für nummerierte Listen
+- positionsgenaue Betonungshinweise für Fett und Kursiv
+- Unit- und Referenztests für Loader, Struktur, Bereinigung und Semantic Renderer
+
+Chunking, TTS und Audio-Zusammenführung folgen in getrennten Komponenten.
+
+## Installation für die Entwicklung
+
+```powershell
+uv sync
+```
+
+## Parser verwenden
+
+```python
+from markdown_tts import (
+    MarkdownParser,
+    ParserRules,
+    SemanticRenderer,
+    SemanticRendererRules,
+    load_markdown,
+)
+
+rules = ParserRules.from_file("config/parser_rules.json")
+document = MarkdownParser(rules).parse(load_markdown("artikel.md"))
+
+renderer_rules = SemanticRendererRules.from_file("config/semantic_renderer.json")
+speech_document = SemanticRenderer(renderer_rules).render(document)
+print(speech_document.text)
+```
+
+Die Funktion `document_text` aus `ast.py` ist ausschließlich eine technische AST-Diagnose. Für die vorgesehene Hörfassung wird immer der `SemanticRenderer` verwendet.
+
+## Sprachvorschau
+
+```powershell
+uv run markdown-tts preview tests\corpus\tc_007_v1.md --show-cues
+```
+
+Die Vorschau zeigt den später zu sprechenden Text und optional die aus Fett/Kursiv abgeleiteten Betonungshinweise.
+
+## Tests
+
+```powershell
+uv run python -m unittest discover -s tests -v
+```
+
+---
+
+# Qualitätsprinzipien
+
+Das Projekt orientiert sich an folgenden Grundsätzen:
+
+- Qualität vor Geschwindigkeit
+- Lesbarkeit vor Komplexität
+- Semantik vor Regex
+- Konfiguration vor Hardcoding
+- Wiederverwendbarkeit vor Speziallösungen
+- Dokumentation ist Teil des Projekts
+
+---
+
+# Entwicklung
+
+Neue Funktionen werden grundsätzlich in dieser Reihenfolge entwickelt:
+
+1. Architektur prüfen
+2. Implementieren
+3. Testen
+4. Dokumentation aktualisieren
+5. Erkenntnisse dokumentieren
+
+---
+
+# Langfristige Roadmap
+
+Geplante Erweiterungen:
+
+- DOCX
+- PDF
+- HTML
+- EPUB
+- Notion Export
+- Obsidian Vault
+- REST API
+- Docker
+- Node.js-Portierung
+
+---
+
+# Ziel
+
+Das langfristige Ziel des Projekts besteht darin, eine universelle Engine zur Umwandlung strukturierter Dokumente in hochwertige Sprachaufnahmen bereitzustellen.
+
+Markdown ist lediglich das erste unterstützte Eingabeformat.
+
+---
+
+# Lizenz
+
+Noch festzulegen.
+
+---
+
+# Status
+
+🚧 In Entwicklung
+
+Erste Version basiert auf Python.
+
+Eine spätere Integration in einen bestehenden Node.js-Server ist ausdrücklich vorgesehen.

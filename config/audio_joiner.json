@@ -1,0 +1,9 @@
+{
+  "backend": "ffmpeg",
+  "executable": "ffmpeg",
+  "probe_executable": "ffprobe",
+  "codec_mode": "copy",
+  "log_level": "error",
+  "timeout_seconds": 300.0,
+  "duration_tolerance_seconds": 1.0
+}

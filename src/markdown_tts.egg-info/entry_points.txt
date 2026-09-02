@@ -1,0 +1,2 @@
+[console_scripts]
+markdown-tts = markdown_tts.cli:main
