@@ -1,6 +1,7 @@
 .deps/
 .venv/
 __pycache__/
+output/prefill-calibrations/
 *.py[cod]
 *.mp3
 *.log
