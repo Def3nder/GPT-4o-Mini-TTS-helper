@@ -1,6 +1,0 @@
-2026-09-01 23:47:05 | INFO | markdown_tts.loader | Lade Markdown-Datei: tests\corpus\tc_007_v1.md
-2026-09-01 23:47:05 | INFO | markdown_tts.parser | Markdown geparst: 9 AST-Blöcke
-2026-09-01 23:47:05 | INFO | markdown_tts.tts.openai_provider | Starte OpenAI-TTS: Modell=gpt-4o-mini-tts-2025-12-15, Format=mp3, Ziel=output\usage-sse-live-test.mp3
-2026-09-01 23:47:10 | INFO | markdown_tts.tts.openai_provider | OpenAI-TTS abgeschlossen: output\usage-sse-live-test.mp3; Input-Tokens=115, Output-Tokens=552
-2026-09-01 23:47:10 | INFO | markdown_tts.application | Dokument 1/1 synthetisiert: 303 Zeichen -> output\usage-sse-live-test.mp3
-2026-09-01 23:47:10 | INFO | markdown_tts.cli | Dokument 1/1: 303 Zeichen; 115 Input + 552 Audio-Output = 667 Tokens | berechnet 0,006693 USD
