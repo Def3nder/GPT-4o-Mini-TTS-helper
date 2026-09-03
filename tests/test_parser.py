@@ -70,6 +70,13 @@ class MarkdownParserTests(unittest.TestCase):
         assert isinstance(paragraph, Paragraph)
         self.assertTrue(any(isinstance(node, Link) for node in paragraph.children))
 
+    def test_filters_german_date_format(self) -> None:
+        document = self.parser.parse("Datum: 02.09.2026\n\nSprechbarer Text\n")
+
+        visible = document_text(document)
+        self.assertNotIn("Datum:", visible)
+        self.assertIn("Sprechbarer Text", visible)
+
     def test_keeps_unclosed_front_matter_as_document_content(self) -> None:
         document = self.parser.parse("---\ntitle: Bleibt erhalten\n")
 

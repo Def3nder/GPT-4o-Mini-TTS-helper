@@ -6,5 +6,5 @@
   "source_prefixes": [
     "Quelle:"
   ],
-  "date_line_pattern": "^Datum:\\s*\\d{4}-\\d{2}-\\d{2}\\s*$"
+  "date_line_pattern": "^Datum:\\s*(?:\\d{4}-\\d{2}-\\d{2}|\\d{2}\\.\\d{2}\\.\\d{4})\\s*$"
 }
