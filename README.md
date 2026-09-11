@@ -458,6 +458,8 @@ Pro Chunk erfolgt ein WAV-TTS-Aufruf. Der Trimmer durchsucht nur ein konfigurier
 
 Die bereinigten PCM-WAV-Dateien werden ohne Qualitätsverlust zusammengefügt und anschließend genau einmal mit FFmpeg als MP3 kodiert. Bei Erfolg wird das Arbeitsverzeichnis standardmäßig automatisch entfernt; `--keep-chunks` bewahrt es ausdrücklich auf und gibt seinen Pfad aus. Bei einem Fehler bleiben Roh-Chunks, bereits getrimmte Chunks und weitere vorhandene Diagnoseartefakte unabhängig vom Schalter in einem Arbeitsordner neben der Zieldatei erhalten; dessen Pfad wird in der Fehlermeldung protokolliert. Vorspannsatz, Suchfenster und Energiegrenze stehen in `config/prefill.json`; die finale MP3-Kodierung steht in `config/audio_encoder.json`.
 
+Die lokale MP3-Kodierung verwendet `libmp3lame` mit VBR und mittlerer Qualitätsstufe (`-q:a 5`). `vbr_quality` ersetzt den bisherigen Konfigurationswert `bitrate`: erlaubt sind ganze Zahlen von 0 (höchste Qualität) bis 9 (geringste Qualität), Standard ist 5. Das gilt auch für die beiden Compact-Varianten mit ihrer jeweiligen `config.json`. Die Bitrate und Dateigröße hängen vom Audioinhalt ab. Kurze Texte mit direkter MP3-Ausgabe vom TTS-Anbieter durchlaufen den lokalen Encoder nicht und werden von dieser Einstellung nicht beeinflusst.
+
 Der Vorspann erhöht den Inputverbrauch jedes Chunk-Aufrufs um derzeit 66 Zeichen. Nur bei einem Cache-Miss oder mit `--refresh-calibration` kommt ein Kalibrierungsaufruf hinzu. Die eigentlichen Chunk-Grenzen berücksichtigen die Reserve automatisch.
 
 ## Fortschritt, Tokenverbrauch, Kosten und Logging

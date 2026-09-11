@@ -37,7 +37,7 @@ export async function loadConfig(filename = path.join(ROOT, 'config.json')) {
       parser: ['front_matter_delimiter', 'url_pattern', 'date_line_pattern'],
       renderer: ['block_separator', 'list_item_separator', 'ordered_list_fallback'],
       tts: ['model', 'voice', 'instructions', 'api_key_environment_variable'],
-      prefill: ['text', 'separator'], audio: ['ffmpeg', 'ffprobe', 'bitrate'], runtime: ['cache_directory'],
+      prefill: ['text', 'separator'], audio: ['ffmpeg', 'ffprobe'], runtime: ['cache_directory'],
     })) for (const key of keys) {
       if (typeof c[section][key] !== 'string' || !c[section][key]) throw Error(`${section}.${key} fehlt.`);
     }
@@ -55,6 +55,7 @@ export async function loadConfig(filename = path.join(ROOT, 'config.json')) {
       if (!Number.isFinite(c.prefill[key]) || c.prefill[key] < 0) throw Error(`prefill.${key} ist ungültig.`);
     }
     if (!Number.isFinite(c.prefill.quiet_threshold_dbfs) || c.prefill.quiet_threshold_dbfs >= 0) throw Error('Ruhepegel muss negativ sein.');
+    if (!Number.isInteger(c.audio.vbr_quality) || c.audio.vbr_quality < 0 || c.audio.vbr_quality > 9) throw Error('audio.vbr_quality muss eine Ganzzahl zwischen 0 und 9 sein.');
     if (typeof c.runtime.keep_failed_work !== 'boolean') throw Error('keep_failed_work muss boolesch sein.');
     new RegExp(c.parser.url_pattern, c.parser.url_flags);
     new RegExp(c.parser.date_line_pattern, 'u');
@@ -380,7 +381,7 @@ export async function convert(input, output, c, { signal, emit = () => {}, synth
         await joined.write(wavHeader(reference, bytes), 0, 44, 0);
       } finally { await joined.close(); }
       emit('encoding', 'Chunks werden als MP3 kodiert und geprüft.');
-      await runTool(c.audio.ffmpeg, ['-nostdin', '-v', 'error', '-n', '-i', combined, '-c:a', 'libmp3lame', '-b:a', c.audio.bitrate, staged], signal, c.audio.timeout_seconds);
+      await runTool(c.audio.ffmpeg, ['-nostdin', '-v', 'error', '-n', '-i', combined, '-c:a', 'libmp3lame', '-q:a', String(c.audio.vbr_quality), staged], signal, c.audio.timeout_seconds);
       const info = JSON.parse(await runTool(c.audio.ffprobe, ['-v', 'error', '-show_entries', 'stream=codec_name:format=duration', '-of', 'json', staged], signal, c.audio.timeout_seconds));
       const seconds = Number(info.format?.duration), expected = bytes / (reference.channels * reference.width * reference.rate);
       if (!info.streams?.some(s => s.codec_name === 'mp3') || !Number.isFinite(seconds)

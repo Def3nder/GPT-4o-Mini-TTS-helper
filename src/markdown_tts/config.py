@@ -435,7 +435,7 @@ class AudioEncoderConfig:
     probe_executable: str
     codec: str
     expected_codec_name: str
-    bitrate: str
+    vbr_quality: int
     log_level: str
     timeout_seconds: float
     duration_tolerance_seconds: float
@@ -448,13 +448,17 @@ class AudioEncoderConfig:
             "Audio-Encoder-Konfiguration",
             AudioEncoderConfigurationError,
         )
+        quality = raw.get("vbr_quality")
+        if type(quality) is not int or not 0 <= quality <= 9:
+            raise AudioEncoderConfigurationError(
+                "'vbr_quality' muss eine Ganzzahl zwischen 0 und 9 sein."
+            )
         string_fields = (
             "backend",
             "executable",
             "probe_executable",
             "codec",
             "expected_codec_name",
-            "bitrate",
             "log_level",
         )
         for key in string_fields:
@@ -484,7 +488,7 @@ class AudioEncoderConfig:
             probe_executable=raw["probe_executable"],
             codec=raw["codec"],
             expected_codec_name=raw["expected_codec_name"],
-            bitrate=raw["bitrate"],
+            vbr_quality=quality,
             log_level=raw["log_level"],
             timeout_seconds=float(timeout),
             duration_tolerance_seconds=float(tolerance),

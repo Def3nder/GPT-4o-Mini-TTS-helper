@@ -51,6 +51,9 @@ def load_config():
             value = cfg[section][key]
             if type(value) not in (int, float) or not math.isfinite(value) or value <= 0:
                 raise ValueError(f"{section}.{key} muss eine positive Zahl sein.")
+    quality = cfg["audio"].get("vbr_quality")
+    if type(quality) is not int or not 0 <= quality <= 9:
+        raise ValueError("audio.vbr_quality muss eine Ganzzahl zwischen 0 und 9 sein.")
     c, p, t = cfg["chunking"], cfg["prefill"], cfg["tts"]
     if type(c["max_characters"]) is not int or not 0 < c["minimum_split_ratio"] <= 1:
         raise ValueError("Ungültiges Chunk-Limit oder Teilungsverhältnis.")
@@ -321,7 +324,7 @@ def calibration(client, cfg, work):
 def encode_mp3(source, target, cfg, expected_duration):
     a = cfg["audio"]
     subprocess.run([a["ffmpeg"], "-nostdin", "-v", "error", "-n", "-i", str(source),
-                    "-c:a", "libmp3lame", "-b:a", a["bitrate"], str(target)],
+                    "-c:a", "libmp3lame", "-q:a", str(a["vbr_quality"]), str(target)],
                    check=True, capture_output=True, timeout=a["timeout_seconds"])
     result = subprocess.run([a["ffprobe"], "-v", "error", "-show_entries",
                              "stream=codec_name:format=duration", "-of", "json", str(target)],

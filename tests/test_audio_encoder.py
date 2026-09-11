@@ -66,7 +66,8 @@ class FFmpegAudioEncoderTests(unittest.TestCase):
                 if "ffmpeg" in Path(call[0]).stem.casefold()
             )
             self.assertIn("libmp3lame", ffmpeg_call)
-            self.assertIn("128k", ffmpeg_call)
+            self.assertEqual(ffmpeg_call[ffmpeg_call.index("-q:a") + 1], "5")
+            self.assertNotIn("-b:a", ffmpeg_call)
 
 
 if __name__ == "__main__":

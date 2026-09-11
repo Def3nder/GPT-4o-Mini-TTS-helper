@@ -4,7 +4,7 @@
   "probe_executable": "ffprobe",
   "codec": "libmp3lame",
   "expected_codec_name": "mp3",
-  "bitrate": "128k",
+  "vbr_quality": 5,
   "log_level": "error",
   "timeout_seconds": 300.0,
   "duration_tolerance_seconds": 0.2
